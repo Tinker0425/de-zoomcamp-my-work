@@ -41,9 +41,13 @@ tasks:
             type: postgres
             host: host.docker.internal
             user: kestra
+            #user: postgres
+            #password: postgres
             password: k3str4
             port: 5432
             dbname: postgres-zoomcamp
+            # dbname: kestra
+            # dbname: ny_taxi
             schema: public
             threads: 8
             connect_timeout: 10
