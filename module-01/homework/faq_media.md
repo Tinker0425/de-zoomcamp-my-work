@@ -25,4 +25,5 @@ https://datatalks-club.slack.com/archives/C01FABYF2RG/p1736885764495439?thread_t
 https://datatalks-club.slack.com/archives/C01FABYF2RG/p1737058459715239?thread_ts=1737056071.711319&cid=C01FABYF2RG
 
 https://docs.google.com/document/d/19bnYs80DwuUimHM65UV3sylsCn2j1vziPOwzBwQrebw/edit?tab=t.0#heading=h.dcoedjsa6bzh
+
 Python - SQLAlchemy - NoSuchModuleError: Can't load plugin: sqlalchemy.dialects:postgresql.psycopg
