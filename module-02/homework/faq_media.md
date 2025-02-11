@@ -5,7 +5,10 @@ https://www.linkedin.com/posts/kaylaflynn_dezoomcamp-kestra-workflowautomation-a
 https://tinker0425.github.io/data-engineering/2025/01/30/day18.html
 https://bsky.app/profile/cloudybluewave.bsky.social/post/3lgyzai3hms2f
 https://tinker0425.github.io/data-engineering/2025/01/31/day19.html
-
+https://bsky.app/profile/cloudybluewave.bsky.social/post/3lha5dknnds2l
+https://bsky.app/profile/cloudybluewave.bsky.social/post/3lh3as3pkfs2w
+https://tinker0425.github.io/data-engineering/2025/02/04/day23.html
 
 ## FAQ
 https://datatalks-club.slack.com/archives/C01FABYF2RG/p1738362706631949?thread_ts=1738355550.937739&cid=C01FABYF2RG
+https://datatalks-club.slack.com/archives/C01FABYF2RG/p1738514188670719
