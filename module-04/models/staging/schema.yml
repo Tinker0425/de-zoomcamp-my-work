@@ -3,13 +3,15 @@ version: 2
 sources:
   - name: staging
     database: "{{ env_var('DBT_DATABASE', 'taxi-rides-ny-448101') }}"
-    schema: "{{ env_var('DBT_SCHEMA', 'trips_data_all') }}"
+    schema: "{{ env_var('DBT_SCHEMA', 'module_4_dbt') }}"
       # loaded_at_field: record_loaded_at
+      # Change DB to now 'module_4_dbt' from trips_data_all
     tables:
       - name: green_tripdata
       - name: yellow_tripdata
          # freshness:
            # error_after: {count: 6, period: hour}
+      
 
 models:
     - name: stg_green_tripdata
