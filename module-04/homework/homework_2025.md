@@ -171,8 +171,10 @@ Now, what are the values of `p97`, `p95`, `p90` for Green Taxi and Yellow Taxi, 
 ### Question 7: Top #Nth longest P90 travel time Location for FHV
 
 Prerequisites:
-* Create a staging model for FHV Data (2019), and **DO NOT** add a deduplication step, just filter out the entries where `where dispatching_base_num is not null`
-* Create a core model for FHV Data (`dim_fhv_trips.sql`) joining with `dim_zones`. Similar to what has been done [here](../../../04-analytics-engineering/taxi_rides_ny/models/core/fact_trips.sql)
+* Create a staging model for FHV Data (2019), and **DO NOT** add a deduplication step, 
+just filter out the entries where `where dispatching_base_num is not null`
+* Create a core model for FHV Data (`dim_fhv_trips.sql`) joining with `dim_zones`. 
+Similar to what has been done [here](../../../04-analytics-engineering/taxi_rides_ny/models/core/fact_trips.sql)
 * Add some new dimensions `year` (e.g.: 2019) and `month` (e.g.: 1, 2, ..., 12), based on `pickup_datetime`, to the core model to facilitate filtering for your queries
 
 Now...

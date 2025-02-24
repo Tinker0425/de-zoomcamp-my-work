@@ -205,6 +205,8 @@ And what a pain, I needed to use lowercase for my payment_type_description.
 
 :white_check_mark: ANSWER **green: {p97: 55.0, p95: 45.0, p90: 26.5}, yellow: {p97: 31.5, p95: 25.5, p90: 19.0}**
 
+![Q6](img_q6.png)
+
 
 ### Question 7: Top #Nth longest P90 travel time Location for FHV
 
@@ -220,9 +222,12 @@ Now...
 1. Create a new model `fct_fhv_monthly_zone_traveltime_p90.sql`
 2. For each record in `dim_fhv_trips.sql`, compute 
 the [timestamp_diff](https://cloud.google.com/bigquery/docs/reference/standard-sql/timestamp_functions#timestamp_diff) in seconds between dropoff_datetime and pickup_datetime - we'll call it `trip_duration` for this exercise
-3. Compute the **continous** `p90` of `trip_duration` partitioning by year, month, pickup_location_id, and dropoff_location_id
+3. Compute the **continous** `p90` of `trip_duration` partitioning by 
+year, month, pickup_location_id, and dropoff_location_id
 
-For the Trips that **respectively** started from `Newark Airport`, `SoHo`, and `Yorkville East`, in November 2019, what are **dropoff_zones** with the 2nd longest p90 trip_duration ?
+For the Trips that **respectively** started from `Newark Airport`, `SoHo`, 
+and `Yorkville East`, in November 2019, what are **dropoff_zones** with the 
+2nd longest p90 trip_duration ?
 
 - LaGuardia Airport, Chinatown, Garment District
 - LaGuardia Airport, Park Slope, Clinton East
@@ -230,9 +235,13 @@ For the Trips that **respectively** started from `Newark Airport`, `SoHo`, and `
 - LaGuardia Airport, Rosedale, Bath Beach
 - LaGuardia Airport, Yorkville East, Greenpoint
 
-:white_check_mark: ANSWER **LaGuardia Airport, Rosedale, Bath Beach**
+:white_check_mark: ANSWER **LaGuardia Airport, Chinatown, Garment District**
 
-:pencil: We be guessing at this point, ran out of time
+:pencil: We be guessing at this point, ran out of time...ok working on it now. Need to use
+row_number https://stackoverflow.com/questions/961007/how-do-i-use-row-number to grab 2nd longest maybe?
+Ok, I used question7.sql to set everything up. Struggled with the row number ranking part,
+so just used my query and found it manually.
+
 
 --
 
