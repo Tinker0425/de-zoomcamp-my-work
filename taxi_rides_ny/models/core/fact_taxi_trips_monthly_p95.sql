@@ -1,4 +1,4 @@
-WITH filtered_data AS (
+WITH clean_fact_trips AS (
     SELECT
         service_type,
         EXTRACT(YEAR FROM pickup_datetime) AS year,
@@ -10,16 +10,20 @@ WITH filtered_data AS (
     WHERE
         fare_amount > 0
         AND trip_distance > 0
-        AND payment_type_description IN ('Cash', 'Credit Card')
+        AND lower(payment_type_description) in ('cash', 'credit card')
+),
+
+fare_amt_perc AS(
+    SELECT
+        service_type,
+        year,
+        month,
+        PERCENTILE_CONT(fare_amount, 0.97) OVER (PARTITION BY service_type, year, month) AS p97,
+        PERCENTILE_CONT(fare_amount, 0.95) OVER (PARTITION BY service_type, year, month) AS p95,
+        PERCENTILE_CONT(fare_amount, 0.90) OVER (PARTITION BY service_type, year, month) AS p90
+    FROM clean_fact_trips
+    --GROUP BY service_type, year, month
+    --ORDER BY year, month, service_type
 )
 
-SELECT
-    service_type,
-    year,
-    month,
-    APPROX_QUANTILES(fare_amount, 100)[OFFSET(97)] AS p97,
-    APPROX_QUANTILES(fare_amount, 100)[OFFSET(95)] AS p95,
-    APPROX_QUANTILES(fare_amount, 100)[OFFSET(90)] AS p90
-FROM filtered_data
-GROUP BY service_type, year, month
-ORDER BY year, month, service_type
+SELECT * FROM fare_amt_perc
