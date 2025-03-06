@@ -13,4 +13,4 @@ You can follow along with me as I post my thoughts, work, and notes here:
 - :bust_in_silhouette: [My Linkedin](https://www.linkedin.com/in/kaylaflynn) for weekly posts
 - :pencil: [My blog](https://tinker0425.github.io/) shared on [bluesky](https://bsky.app/profile/cloudybluewave.bsky.social) for daily posts
 
-![](Untitled Diagram.svg)
+![](Untitled Diagram.drawio.svg)
