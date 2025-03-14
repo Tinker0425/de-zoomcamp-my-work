@@ -10,3 +10,4 @@ https://bsky.app/profile/cloudybluewave.bsky.social/post/3lkaajg53xk2g
 https://bsky.app/profile/cloudybluewave.bsky.social/post/3lkchkap7l22z
 
 ## FAQ
+https://datatalks-club.slack.com/archives/C01FABYF2RG/p1741917530892869?thread_ts=1741665391.005109&cid=C01FABYF2RG
